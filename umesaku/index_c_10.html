@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>画像を重ねる</title>
+
+    <style>
+        .image-box {
+            position: relative;
+            width: 640px;
+            height: 640px;
+        }
+
+        .big {
+            width: 640px;
+            height: 640px;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 320px;
+            height: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-box">
+        <img class="big" src="https://techup.tokyo/wp-content/uploads/2021/12/image2.jpg">
+        <img class="small" src="https://techup.tokyo/wp-content/uploads/2021/12/image1.jpg">
+    </div>
+</body>
+</html>

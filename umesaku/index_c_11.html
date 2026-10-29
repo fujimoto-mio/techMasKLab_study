@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>タブ切り替え</title>
+
+    <style>
+        .tab {
+            display: inline-block;
+            padding: 20px 60px;
+            background: lightgray;
+        }
+
+        .panel {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #tab1:checked ~ .panel1 {
+            display: block;
+        }
+
+        #tab2:checked ~ .panel2 {
+            display: block;
+        }
+
+        #tab3:checked ~ .panel3 {
+            display: block;
+        }
+
+        input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <input type="radio" name="tab" id="tab3">
+
+    <label for="tab1" class="tab">タブ1</label>
+    <label for="tab2" class="tab">タブ2</label>
+    <label for="tab3" class="tab">タブ3</label>
+
+    <div class="panel panel1">タブパネル-1</div>
+    <div class="panel panel2">タブパネル-2</div>
+    <div class="panel panel3">タブパネル-3</div>
+
+</body>
+</html>

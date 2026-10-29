@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グリッドレイアウト</title>
+
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .header {
+            grid-column: 1 / 7;
+            background: blue;
+        }
+
+        .content-1 {
+            grid-column: 1 / 4;
+            background: lime;
+        }
+
+        .content-2 {
+            grid-column: 4 / 7;
+            background: red;
+        }
+
+        .content-3-1 {
+            grid-column: 1 / 3;
+            background: cyan;
+        }
+
+        .content-3-2 {
+            grid-column: 3 / 5;
+            background: white;
+        }
+
+        .content-3-3 {
+            grid-column: 5 / 7;
+            background: yellow;
+        }
+
+        .content-4-1 {
+            grid-column: 1 / 4;
+            background: purple;
+        }
+
+        .content-4-2 {
+            grid-column: 4 / 7;
+            background: magenta;
+        }
+
+        .footer {
+            grid-column: 1 / 7;
+            background: peru;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">header</div>
+
+        <div class="content-1">content-1</div>
+        <div class="content-2">content-2</div>
+
+        <div class="content-3-1">content-3-1</div>
+        <div class="content-3-2">content-3-2</div>
+        <div class="content-3-3">content-3-3</div>
+
+        <div class="content-4-1">content-4-1</div>
+        <div class="content-4-2">content-4-2</div>
+
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
