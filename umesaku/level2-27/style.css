@@ -71,3 +71,64 @@ footer {
 footer p {
     margin: 0;
 }
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .main-visual {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .main-visual img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .main-visual h2 {
+        font-size: 32px;
+    }
+}
+/* スマホ用ヘッダーメニュー */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border: 1px solid #333;
+        text-align: center;
+        font-size: 16px;
+    }
+}
