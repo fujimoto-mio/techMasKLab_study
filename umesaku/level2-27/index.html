@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,follow">
-
     <title>FASHION | 自分らしいファッションを楽しむ</title>
-
-    <meta name="description" content="新しい季節のアイテムやおすすめコーディネートを紹介するファッションサイトです。自分らしいファッションを楽しむためのスタイルを提案します。">
-
-    <meta property="og:site_name" content="FASHION">
-    <meta property="og:title" content="FASHION | 自分らしいファッションを楽しむ">
-    <meta property="og:description" content="新しい季節のアイテムやおすすめコーディネートを紹介するファッションサイトです。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="#">
-    <meta name="twitter:site" content="#">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="navbar">
-        <h1 class="navbar-brand">FASHION</h1>
+    <header>
+        <h1>FASHION</h1>
 
-        <nav>
-            <a class="nav-link" href="#">HOME</a>
-            <a class="nav-link" href="#">NEW</a>
-            <a class="nav-link" href="#">ITEM</a>
-            <a class="nav-link" href="#">ABOUT</a>
+        <button class="menu-button" id="menuButton" type="button"
+                aria-label="メニューを開く"
+                aria-expanded="false"
+                aria-controls="globalNav">
+            <span class="menu-icon">☰</span>
+            <span class="menu-text">メニュー</span>
+        </button>
+
+        <nav id="globalNav">
+            <a href="#">HOME</a>
+            <a href="#">NEW</a>
+            <a href="#">ITEM</a>
+            <a href="#">ABOUT</a>
         </nav>
     </header>
 
     <main>
-
         <section class="main-visual">
-            <img src="image/ダウンロード.jpg" alt="ファッションコーディネート">
+            <img src="image/ダウンロード.jpg" alt="ファッション">
             <h2>NEW STYLE</h2>
             <p>毎日をもっと自分らしく。</p>
         </section>
@@ -56,13 +49,34 @@
             <h2>ABOUT</h2>
             <p>自分らしいファッションを楽しむためのスタイルを提案します。</p>
         </section>
-
     </main>
 
     <footer>
         <p>© FASHION</p>
     </footer>
 
-</body>
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const globalNav = document.getElementById('globalNav');
+        const menuIcon = document.querySelector('.menu-icon');
+        const menuText = document.querySelector('.menu-text');
 
+        menuButton.addEventListener('click', function () {
+            const isOpen = globalNav.classList.toggle('open');
+
+            menuButton.setAttribute('aria-expanded', isOpen);
+
+            if (isOpen) {
+                menuIcon.textContent = '×';
+                menuText.textContent = '閉じる';
+                menuButton.setAttribute('aria-label', 'メニューを閉じる');
+            } else {
+                menuIcon.textContent = '☰';
+                menuText.textContent = 'メニュー';
+                menuButton.setAttribute('aria-label', 'メニューを開く');
+            }
+        });
+    </script>
+
+</body>
 </html>

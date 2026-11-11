@@ -55,3 +55,34 @@ footer {
     object-fit: cover;
     margin-bottom: 20px;
 }
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 8px;
+    }
+
+    .main-visual {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .main-visual img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .main-visual h2 {
+        font-size: 30px;
+    }
+}
